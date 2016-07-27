@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Program
 {
     class Program
@@ -27,7 +28,7 @@ namespace Program
                         break;
                     case 'd':
                         proceed = false;
-                        Console.WriteLine("bye bye");
+                        Console.WriteLine("Cierre de sistema");
                         Console.ReadKey();
                         break;
                     default:
@@ -41,7 +42,9 @@ namespace Program
 
         private static void loopANumber()
         {
+
             throw new NotImplementedException();
+
         }
 
         private static void concatenarStrings()
@@ -51,7 +54,19 @@ namespace Program
 
         private static void addValues()
         {
-            throw new NotImplementedException();
+           int a,b,c;
+            
+            Console.WriteLine("Ingrese un numero:\n");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.ReadKey();
+            Console.WriteLine("Ingrese otro numero:\n");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.ReadKey();
+            c = (a + b);
+            Console.WriteLine("La suma de los dos numeros  " + c);
+            Console.ReadKey();
+            
+
         }
 
         static char printMenu()
