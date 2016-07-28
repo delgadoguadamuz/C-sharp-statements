@@ -19,12 +19,15 @@ namespace Program
                 {
                     case 'a':
                         addValues();
+                        Console.Clear();
                         break;
                     case 'b':
                         concatenarStrings();
+                        Console.Clear();
                         break;
                     case 'c':
                         loopANumber();
+                        Console.Clear();
                         break;
                     case 'd':
                         proceed = false;
@@ -36,39 +39,74 @@ namespace Program
                         break;
 
                 }
-                break;   
+                
             }
         }
 
         private static void loopANumber()
         {
 
-            throw new NotImplementedException();
+            int value;
 
+            Console.WriteLine("Por favor ingrese un numero");
+            Console.ReadLine();
+            value = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < value; i++)
+            {
+
+                Console.WriteLine("El valor de i es " + i);
+
+            }
+
+            int u = value;
+            while (u > 0)
+            {
+
+                Console.WriteLine("El valor de u es" + u);
+                u--;
+            }
+
+            Console.ReadKey();
+           
         }
+        
 
         private static void concatenarStrings()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Digite un frase");
+            Console.ReadLine();
+            string frase1 = Console.ReadLine();
+
+            Console.WriteLine("Digite otra frase");
+            string frase2 = Console.ReadLine();
+
+            Console.WriteLine("Las frases digitas son :"+ frase1 + frase2);
+            Console.ReadLine();
+            
+
         }
 
         private static void addValues()
         {
-           int a,b,c;
+           int a,b;
             
-            Console.WriteLine("Ingrese un numero:\n");
+            Console.WriteLine("Ingrese un numero:");
+            Console.ReadLine();
             a = Convert.ToInt32(Console.ReadLine());
-            Console.ReadKey();
-            Console.WriteLine("Ingrese otro numero:\n");
-            b = Convert.ToInt32(Console.ReadLine());
-            Console.ReadKey();
-            c = (a + b);
-            Console.WriteLine("La suma de los dos numeros  " + c);
-            Console.ReadKey();
             
+            Console.WriteLine("Ingrese otro numero:");
+            b = Convert.ToInt32(Console.ReadLine());
+           
+            int suma = 0;
+            suma= a + b;
+
+            Console.WriteLine("La suma de los dos numeros  " + suma);
+            Console.ReadLine();
+           
 
         }
-
+        
         static char printMenu()
         {
             Console.WriteLine("Seleccione una opcion\n");
